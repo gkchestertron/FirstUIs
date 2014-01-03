@@ -1,8 +1,8 @@
 (function (root) {
   var TTT = root.TTT = (root.TTT || {});
-  var turn = "x"
+  var turn = "ned"
   function toggleTurn() {
-    turn === "x" ? turn = "o" : turn = "x";
+    turn === "ned" ? turn = "kush" : turn = "ned";
   }
 
   var game = new TTT.Game();
@@ -15,11 +15,11 @@
       console.log($(tile).data('coords'));
       game.turn($(tile).data('coords'), function () {
         $(tile).addClass(turn);
-        toggleTurn();
         if (game.winner())
         {
-          alert("Someone won!");
+          alert(turn + " won!");
         }
+        toggleTurn();
       })
     })
   })

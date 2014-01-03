@@ -13,10 +13,12 @@
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-.x {
-  background: #FF0000;
+.ned {
+  background: url('ned.jpg');
+  background-size: cover;
 }
 
-.o {
-  background: #0000FF;
+.kush {
+  background: url('kush.jpg');
+  background-size: cover;
 }
