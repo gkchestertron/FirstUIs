@@ -14,10 +14,14 @@
       console.log('click');
       console.log($(tile).data('coords'));
       game.turn($(tile).data('coords'), function () {
-        $(tile).addClass(turn);
+        $(tile).toggleClass(turn);
         if (game.winner())
         {
-          alert(turn + " won!");
+          toggleTurn();
+          $('.tile').removeClass(turn);
+          toggleTurn();
+          $('.tile').addClass(turn);
+          alert(turn + " wins!");
         }
         toggleTurn();
       })
